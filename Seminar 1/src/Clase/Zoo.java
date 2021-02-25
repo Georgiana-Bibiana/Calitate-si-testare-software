@@ -3,7 +3,7 @@ package Clase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Zoo {
+public class Zoo implements ZooInterface{
 	private Zookepper zookepper;
 	private List<Animal> animalList;
 	
@@ -18,15 +18,16 @@ public class Zoo {
 		this.animalList = animalList;
 	}
 	
-	public void AdaugaAnimal(Animal animal) {
+	public void addAnimal(Animal animal) {
 		animalList.add(animal);
 	}
 	
-	public void FeedAnimals() {
+	public void feedAllAnimals() {
 		for(Animal animal : animalList) {
 			zookepper.Feed(animal);
 		}
 	}
+	
 	
 	
 }

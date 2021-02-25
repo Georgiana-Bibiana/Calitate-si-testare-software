@@ -1,5 +1,6 @@
 package Pachet;
 import Clase.Girafa;
+import Clase.Zebra;
 import Clase.Zoo;
 
 public class Program {
@@ -10,11 +11,19 @@ public class Program {
 		Girafa g1=new Girafa("g1");
 		Girafa g2=new Girafa("g2");
 		
-		zoo.AdaugaAnimal(g1);
-		zoo.AdaugaAnimal(g2);
+		zoo.addAnimal(g1);
+		zoo.addAnimal(g2);
 		
-		zoo.FeedAnimals();
-	
+		zoo.feedAllAnimals();
+		
+		Zebra z1=new Zebra("z1");
+		Zebra z2=new Zebra("z2");
+		
+		zoo.addAnimal(z1);
+		zoo.addAnimal(z2);
+		
+		zoo.feedAllAnimals();
+		
 	}
 
 }
