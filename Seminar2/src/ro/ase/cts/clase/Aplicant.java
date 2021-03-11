@@ -41,6 +41,8 @@ public abstract class Aplicant{
 	}
 	
 	
+	
+	
 
 	
 	public Aplicant() {
@@ -59,8 +61,20 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+//	public void setNr_proiecte(int nr_proiecte) {
+//		this.nr_proiecte = nr_proiecte;
+//	}
+	public String[] getDenumiriProiecte() {
+		return denumireProiect;
+	}
+	public void setVectorDenumiri(int nr_Proiecte, String[] denumiriProiecte) {
+		this.denumireProiect = denumiriProiecte;
 		this.nr_proiecte = nr_proiecte;
 	}
+	
+	
+	
 
+	
+	
 }
