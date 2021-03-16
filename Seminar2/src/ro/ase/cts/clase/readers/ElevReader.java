@@ -17,23 +17,24 @@ public class ElevReader extends iReader{
     }
 
     public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
-        Scanner input2 = new Scanner(new File(super.filePath));
-        input2.useDelimiter(",|\n");
+        Scanner cotinutFisierElevi = new Scanner(new File(super.filePath));
+        cotinutFisierElevi.useDelimiter(",|\n");
         List<Aplicant> elevi = new ArrayList<>();
 
-        while (input2.hasNext()) {
+        while (cotinutFisierElevi.hasNext()) {
            Elev elev=new Elev();
-           super.citireAplicant(input2, elev);
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
+           super.citireAplicant(cotinutFisierElevi, elev);
+           
+           int clasa = cotinutFisierElevi.nextInt();
+           String tutore = cotinutFisierElevi.next();
             
-            elev.setClasa(clasa);
-            elev.setTutore(tutore);
+           elev.setClasa(clasa);
+           elev.setTutore(tutore);
             
-            elevi.add(elev);
+           elevi.add(elev);
         }
 
-        input2.close();
+        cotinutFisierElevi.close();
         return elevi;
     }
 }

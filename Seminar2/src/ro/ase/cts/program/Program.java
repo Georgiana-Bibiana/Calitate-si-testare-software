@@ -21,7 +21,9 @@ public class Program {
 		System.out.println("Suma finantata pentru angajata: "+Angajat.getSumaFinantare());
 		System.out.println("Suma finantata pentru student: "+Student.getSumaFinantare());
 		System.out.println("Suma finantata pentru elev: "+Elev.getSumaFinantare());
+		
 		List<Aplicant> listaAplicanti;
+		
 		try {
 			listaAplicanti = citesteAplicanti(new AngajatReader("angajati.txt"));
 			Proiect proiect=new Proiect(81);
@@ -33,8 +35,8 @@ public class Program {
 				
 				aplicant.afisareRaspunsProiect(proiect);
 			}
+			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

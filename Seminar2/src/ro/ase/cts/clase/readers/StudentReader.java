@@ -17,15 +17,16 @@ public class StudentReader extends iReader{
     }
 
     public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
-        Scanner input = new Scanner(new File(super.filePath));
-        input.useDelimiter(",|\n");
+        Scanner continutFisierStudenti = new Scanner(new File(super.filePath));
+        continutFisierStudenti.useDelimiter(",|\n");
         List<Aplicant> studenti = new ArrayList<>();
 
-        while (input.hasNext()) {
+        while (continutFisierStudenti.hasNext()) {
             Student student=new Student();
-            super.citireAplicant(input, student);
-            int an_studii = input.nextInt();
-            String facultate = (input.next()).toString();
+            super.citireAplicant(continutFisierStudenti, student);
+            
+            int an_studii = continutFisierStudenti.nextInt();
+            String facultate = (continutFisierStudenti.next()).toString();
             
             student.setFacultate(facultate);
             student.setAn_studii(an_studii);
@@ -33,7 +34,7 @@ public class StudentReader extends iReader{
             studenti.add(student);
             
         }
-        input.close();
+        continutFisierStudenti.close();
         return studenti;
     }
 }
