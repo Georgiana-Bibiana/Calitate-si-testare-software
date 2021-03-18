@@ -20,7 +20,7 @@ public class Program {
 	public static void main(String[] args) {
 		System.out.println("Suma finantata pentru angajata: "+Angajat.getSumaFinantare());
 		System.out.println("Suma finantata pentru student: "+Student.getSumaFinantare());
-		System.out.println("Suma finantata pentru elev: "+Elev.getSumaFinantare());
+
 		
 		List<Aplicant> listaAplicanti;
 		
