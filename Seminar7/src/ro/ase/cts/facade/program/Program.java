@@ -1,7 +1,7 @@
-package ro.ase.cts.program;
+package ro.ase.cts.facade.program;
 
-import ro.ase.cts.clase.Persoana;
-import ro.ase.cts.clase.VerificatorPersoane;
+import ro.ase.cts.facade.clase.Persoana;
+import ro.ase.cts.facade.clase.VerificatorPersoane;
 
 public class Program {
 public static void main(String []args) {
