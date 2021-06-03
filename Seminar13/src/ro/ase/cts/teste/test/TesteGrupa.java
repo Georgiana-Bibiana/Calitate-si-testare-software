@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.time.Duration;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import ro.ase.cts.teste.clase.Grupa;
@@ -12,7 +13,6 @@ import ro.ase.cts.teste.clase.Student;
 
 public class TesteGrupa {
 
-	
 @Test
 public void testConstructorNumarGrupaCorect() {
 	Grupa grupa=new Grupa(1081);
@@ -130,9 +130,15 @@ public void testGetPromovabilitateErrorCondition() {
 	
 }
 
-
-
-
+@Test
+public void testGetPromovabilitateCardinality1() {
+	Grupa grupa=new Grupa(1081);
+	IStudent stud=new Student();
+	stud.adaugaNota(5);
+	stud.adaugaNota(6);
+	grupa.adaugaStudent(stud);
+	assertEquals(1, grupa.getPromovabilitate(), 0.01);
+}
 
 
 }
