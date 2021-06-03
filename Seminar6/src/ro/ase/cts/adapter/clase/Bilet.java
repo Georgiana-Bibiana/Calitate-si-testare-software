@@ -3,6 +3,7 @@ package ro.ase.cts.adapter.clase;
 public class Bilet {
 private float pret;
 
+//Aplicatia initiala  care rezerva si vinde bilete 
 public Bilet(float pret) {
 	super();
 	this.pret = pret;
